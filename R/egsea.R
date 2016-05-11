@@ -614,7 +614,7 @@ egsea.ora <- function(entrezIDs, universe=NULL, logFC=NULL, title=NULL,
 #' 
 
 topSets <- function(gsa, contrast=1, gs.label=1, sort.by=NULL, number = 10, 
-names.only=TRUE){
+        names.only=TRUE){
     tryCatch({                
                 if (contrast == 0 || tolower(contrast) == "comparison") 
                     top.gs = gsa[[gs.label]][["comparison"]][["test.results"]]
@@ -622,10 +622,10 @@ names.only=TRUE){
                     top.gs = gsa[[gs.label]][["test.results"]][[contrast]]
                 if (! is.null(sort.by)){
                     top.gs = top.gs[order(top.gs[,sort.by],
-                            decreasing=(sort.by == "Significance")), ]
+                                    decreasing=(sort.by == "Significance")), ]
                 }   
-                number = ifelse(number <= length(top.gs), number, 
-length(top.gs))
+                number = ifelse(number <= nrow(top.gs), number, 
+                        nrow(top.gs))
                 #print(names(top.gs))
                 top.gs = top.gs[1:number, ]
                 if (names.only)

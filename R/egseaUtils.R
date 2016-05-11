@@ -42,7 +42,7 @@ report){
     if (!is.null(gs.annots$name)){
         gs.annot = gs.annots
         gs.annots = list()
-        gs.annots[[gs.annot$label]] = gs.annots
+        gs.annots[[gs.annot$label]] = gs.annot
     }
     skipped = c()
     for (gs.annot in gs.annots){
