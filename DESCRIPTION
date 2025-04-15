@@ -1,6 +1,6 @@
 Package: EGSEA
 Title: Ensemble of Gene Set Enrichment Analyses
-Version: 1.35.0
+Version: 1.36.0
 Authors@R:
         c(person(given="Monther", family="Alhamdoosh", role=c("aut", "cre"),
                 email="m.hamdoosh@gmail.com"),
